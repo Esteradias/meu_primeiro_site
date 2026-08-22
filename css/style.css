@@ -3,6 +3,23 @@ css\style.css
 Folhas de estilo do template do site.
 */
 
+/* Importa fonte Robot do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset Geral */
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Fonte padrão e tamanho */
+
+html, body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
 body {
     background: linear-gradient(180deg, #F8FAFC, #E0F2FE);
 }
