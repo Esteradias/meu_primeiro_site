@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importa o CSS do template (principal) -->
     <link rel="stylesheet" href="css/style.css">
-    <title>FirstSteps</title>
+    <!-- Ícone de favoritos que aparece na guia da página -->
+    <link rel="icon" href="img/logo01.png">
+    <title>FirstFlight</title>
 </head>
 
 <body>
@@ -17,26 +19,39 @@
 
         <header>
             <!-- Logotipo clicável para a página inicial -->
-            <div class="logotitle">
-                <a href="index.html">
-                    <img src="img/logo01.png" alt="Logotipo do FirstSteps" class="logo">
+            <div class="logotitle" title="Clique para a página inicial" aria-label="Clique para a página inicial">
+                <a href="index.html" id="myLogo">
+                    <img src="img/logo01.png" alt="Logotipo do FirstFlight">
                 </a>
-                <h1>FirstSteps</h1>
+                <h1>FirstFlight</h1>
             </div>
 
-            <form action="https://www.google.com/search" target="_blank" method="get">
-                <input type="search" name="q">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
+            <form class="header-search" action="https://www.google.com/search" target="_blank" method="get">
+                <input type="search" name="q" placeholder="Pesquisar...">
+                <button type="submit" title="Clique para pesquisar" aria-label="Clique para pesquisar"><i
+                        class="fa-solid fa-search fa-fw"></i></button>
             </form>
 
         </header>
 
-        <nav>
+        <nav aria-label="Menu principal">
 
-            <a href="index.html">Início</a>
-            <a href="content.html">Conteúdo</a>
-            <a href="contacts.html">Contatos</a>
-            <a href="about.html">Sobre</a>
+            <a href="index.html" title="Página inicial">
+                <i class="fa-solid fa-door-open fa-fw"></i>
+                <span>Início</span>
+            </a>
+            <a href="content.html" title="Conteúdo do site" aria-label="Conteúdo do site">
+                <i class="fa-solid fa-layer-group fa-fw"></i>
+                <span>Conteúdo</span>
+            </a>
+            <a href="contacts.html" title="Faça contato" aria-label="Faça contato">
+                <i class="fa-solid fa-paper-plane fa-fw"></i>
+                <span>Contatos</span>
+            </a>
+            <a href="about.html" title="Mais informações" aria-label="Mais informações">
+                <i class="fa-solid fa-lightbulb fa-fw"></i>
+                <span>Sobre</span>
+            </a>
 
         </nav>
 
@@ -76,8 +91,9 @@
                     <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
                 </ul>
 
-                <img class="azul" src="https://picsum.photos/400/200" alt="Imagem aleatória">
-
+                <img class="rimg" src="https://picsum.photos/400/200" alt="Imagem aleatória">
+                
+                <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eius libero quos, commodi explicabo
                     voluptates voluptas temporibus nam facilis dolorum, dicta rerum repellendus! Minima numquam deleniti
                     sapiente quibusdam, vero molestias.</p>
@@ -104,7 +120,7 @@
 
             <!-- Página inicial -->
             <a href="index.html">
-                <i class="fa-solid fa-house fa-fw"></i>
+                <i class="fa-solid fa-door-open fa-fw"></i>
             </a>
 
             <!-- Mensagem de propriedade e licença -->
@@ -112,12 +128,36 @@
 
             <!-- Topo da página -->
             <a href="#top">
-                <i class="fa-solid fa-circle-up fa-fw"></i>
+                <i class="fa-solid fa-chevron-up fa-fw"></i>
             </a>
 
         </footer>
 
+        
+        <!-- Hack para margin no final da tela -->
+        <div class="end-margin">&nbsp;</div>
+
     </div>
+
+     <!-- Aviso de cookies -->
+     <div id="cookie-banner" class="cookie-banner">
+
+        <div class="cookie-text">
+            <strong>🍪 Este site utiliza cookies</strong>
+            <p>
+                Utilizamos cookies para melhorar sua experiência de navegação.
+                Ao continuar navegando, você concorda com o uso de cookies.
+            </p>
+        </div>
+
+        <button id="cookie-accept" type="button">
+            Aceitar
+        </button>
+
+    </div>
+
+    <script>var pageName = "Home Page"</script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
