@@ -131,24 +131,51 @@ parent > direct-child */
 }
 
 .logotitle h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--header-logo-font);
     font-weight: bold;
     /* Experimental: adicionar uma borda ao texto */
-    -webkit-text-stroke: .75px white;
+    -webkit-text-stroke: var(--header-title-stroke);
 }
 
+/* Formulário de pesquisa */
 .header-search {
     padding: 1rem;
     display: flex;
+    border-top: var(--top-search-border);
+}
+
+/* Filhos do formulário */
+.header-search input,
+.header-search button {
     font-family: inherit;
     font-size: inherit;
+    border: none;
 }
 
+/* Só com o campo de pesquisa */
 .header-search input {
+    padding: .5rem 1rem;
     flex-grow: 1;
+    border-radius: .3rem 0 0 .3rem;
 }
 
-/* Menu principal */
-#wrap > nav {
-    background-color: black;
+.header-search button {
+    padding: .5rem;
+    border-radius: 0 .3rem .3rem 0;
+    cursor: pointer;
+}
+
+/* Cabeçalho <header> responsivo */
+@media screen and (min-width: 640px) {
+
+    #wrap>header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-search {
+        border: none;
+    }
+
 }
