@@ -24,14 +24,14 @@ Referências: https://fontawesome.com
     --wrap-max-width: 1080px;
     --default-links: #2F6FA3;
     --default-links-hover: #E07A5F;
-    --body-background-image: url("../img/bg01.jpg");
+    --body-background-image: url("../img/bg01.png");
     --body-background-color: #EAF2F8;
-    --header-background-color: #A7D8F0;
+    --header-background-color: linear-gradient(190deg,#5da2c5,#0a5175);
     --header-logo-font: Arial, helvetica, sans-serif;
     --header-title-stroke: .75px #FFFFFF;
-    --nav-footer-background-color: #243447;
-    --article-section-background-color: #FFFFFF;
-    --aside-background-color: #DCE6F2;
+    --nav-footer-background-color: #063c57;
+    --article-section-background-color: rgba(255, 255, 255, 0.8);
+    --aside-background-color: #256585;
     --top-search-border: 3px dotted #FFFFFF;
     --nav-menu-color: #F8FAFC;
     --nav-menu-hover-color: #FFFFFF;
@@ -108,8 +108,8 @@ a:hover {
 /* Fundo da página */
 body {
     /* background: linear-gradient(to right, #4A90E2, #E07A5F, #A7D8F0); */
-    /* background-image: var(--body-background-image); */
-    background-color: var(--body-background-color);
+    background-image: var(--body-background-image);
+    /*background-color: var(--body-background-color); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,7 +165,7 @@ body {
 Seletor: parent > direct-child 
 */
 #wrap>header {
-    background-color: var(--header-background-color);
+    background: var(--header-background-color);
     border-radius: .5rem;
     margin: .5rem;
     display: flex;
@@ -342,6 +342,10 @@ Referências: https://www.w3schools.com/css/css3_flexbox.asp
     font-size: 1.5rem;
     color: var(--nav-menu-color);
     padding: .25rem;
+}
+/* Colocando o ícones maior quando passa o mouse → Tag <i> */
+#wrap>footer a:hover i {
+    transform: scale(1.2);
 }
 
 #wrap>footer a:hover {
